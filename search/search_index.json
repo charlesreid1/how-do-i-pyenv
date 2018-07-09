@@ -1,0 +1,24 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "How Do I Pyenv?\n\u00b6\n\n\nA how-to guide for using pyenv, a program to help you install and manage\nmultipe versions of Python side-by-side in an easy and pain-free way!\n\n\nHTML pages for this tutorial (you are here): \nhttps://pages.charlesreid1.com/how-do-i-pyenv\n\n\nSource code for this tutorial: \nhttps://git.charlesreid1.com/charlesreid1/how-do-i-pyenv\n\n\nMirror on Github: \nhttps://github.com/charlesreid1/how-do-i-pyenv\n\n\nInstalling pyenv\n\u00b6\n\n\nStart by running the pyenv installer (see \npyenv-installer\n):\n\n\n# Install pyenv\ncurl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash\n\n\n\n\n\nThis will install all pyenv-related things to \n~/.pyenv\n.\n\n\nNext, add pyenv's bin directory to $PATH (should already be in ~/.bash_profile but just in case):\n\n\necho 'export PATH=\"~/.pyenv/bin:$PATH\"' >> ~/.bash_profile\n\n\n\n\n\nNow you can log out and log back in, or do \nsource ~/.bash_profile\n, and \ncheck that the following command returns the location of pyenv:\n\n\n$ which pyenv\n\n\n\n\n\nInstalling conda\n\u00b6\n\n\nNow we set the version of python we wish to install. We will install miniconda 4.3.30 for python 3:\n\n\nCONDA=\"miniconda3-4.3.30\"\n\n\n\n\n\nFirst tell pyenv to install this version of conda (this will download and build it):\n\n\npyenv install $CONDA\n\n\n\n\n\nNext, tell pyenv that you want this to be the default version of pyenv Python:\n\n\npyenv global $CONDA\n\n\n\n\n\nFinally, if you want to put this verison of Python on your path, you should run:\n\n\neval \"$(pyenv init -)\"\n\n\n\n\n\nNow you can check to make sure you have the pyenv-installed version of conda:\n\n\nwhich conda\nconda --version\npython --version\n\n\n\n\n\nIf you want to make this version of Python the one on your path, and you want\nthat to happen \nalways\n, you can add the above line to your \n~/.bash_profile\n:\n\n\necho 'eval \"$(pyenv init -)\"' >> ~/.bash_profile",
+            "title": "Index"
+        },
+        {
+            "location": "/#how-do-i-pyenv",
+            "text": "A how-to guide for using pyenv, a program to help you install and manage\nmultipe versions of Python side-by-side in an easy and pain-free way!  HTML pages for this tutorial (you are here):  https://pages.charlesreid1.com/how-do-i-pyenv  Source code for this tutorial:  https://git.charlesreid1.com/charlesreid1/how-do-i-pyenv  Mirror on Github:  https://github.com/charlesreid1/how-do-i-pyenv",
+            "title": "How Do I Pyenv?"
+        },
+        {
+            "location": "/#installing-pyenv",
+            "text": "Start by running the pyenv installer (see  pyenv-installer ):  # Install pyenv\ncurl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash  This will install all pyenv-related things to  ~/.pyenv .  Next, add pyenv's bin directory to $PATH (should already be in ~/.bash_profile but just in case):  echo 'export PATH=\"~/.pyenv/bin:$PATH\"' >> ~/.bash_profile  Now you can log out and log back in, or do  source ~/.bash_profile , and \ncheck that the following command returns the location of pyenv:  $ which pyenv",
+            "title": "Installing pyenv"
+        },
+        {
+            "location": "/#installing-conda",
+            "text": "Now we set the version of python we wish to install. We will install miniconda 4.3.30 for python 3:  CONDA=\"miniconda3-4.3.30\"  First tell pyenv to install this version of conda (this will download and build it):  pyenv install $CONDA  Next, tell pyenv that you want this to be the default version of pyenv Python:  pyenv global $CONDA  Finally, if you want to put this verison of Python on your path, you should run:  eval \"$(pyenv init -)\"  Now you can check to make sure you have the pyenv-installed version of conda:  which conda\nconda --version\npython --version  If you want to make this version of Python the one on your path, and you want\nthat to happen  always , you can add the above line to your  ~/.bash_profile :  echo 'eval \"$(pyenv init -)\"' >> ~/.bash_profile",
+            "title": "Installing conda"
+        }
+    ]
+}
