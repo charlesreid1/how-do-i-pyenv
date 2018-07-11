@@ -24,7 +24,7 @@ This will install all pyenv-related things to `~/.pyenv`.
 Next, add pyenv's bin directory to $PATH (should already be in ~/.bash_profile but just in case):
 
 ```
-echo 'export PATH="~/.pyenv/bin:$PATH"' >> ~/.bash_profile
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bash_profile
 ```
 
 Now you can log out and log back in, or do `source ~/.bash_profile`, and 
